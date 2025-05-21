@@ -1,9 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-*{
-  font-family: "Noto Sans", sans-serif;
-}
-
 .navbar{
   background-color: #cdfeba;
+}
+
+body{
+  min-height: 100vh;
+}
+
+.searched-movie-list {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+.searched-movie-list::-webkit-scrollbar { 
+    display: none; 
 }

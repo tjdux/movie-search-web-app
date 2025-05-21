@@ -1,13 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-*{
-  font-family: "Noto Sans", sans-serif;
-}
-
-h1{
-  font-family: "Noto Sans KR", sans-serif;
-}
-
 .navbar{
   background-color: #b3faff;
+}
+
+body{
+  min-height: 100vh;
+}
+
+.cloneable {
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  display: flex;
+  position: relative;
+}
+
+.pixelated-image-card {
+  border-radius: .5em;
+  width: 276px;
+  height: 414px;
+  position: relative;
+  overflow: hidden;
+}
+
+.before__100 {
+  padding-top: 100%;
+}
+
+.pixelated-image-card__default, 
+.pixelated-image-card__img,
+.pixelated-image-card__active, 
+.pixelated-image-card__pixels{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pixelated-image-card__active {
+  display: none;
+}
+
+.pixelated-image-card__pixel {
+  background-color: currentColor;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+}
+
+.pixelated-image-card__img{
+  object-fit: cover;
 }

@@ -11,8 +11,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="styles/effects/click/explosion.js" defer></script>
   <link rel="stylesheet" href="styles/effects/click/explosion.css">
+  <link rel="stylesheet" href="styles/css/font.css">
+  <link rel="stylesheet" href="styles/css/about.css">
+  <script src="js/about.js" defer type="module"></script>
 </head>
-<body>
+<body class="d-flex flex-column m-0">
   <header class="mb-5">
     <nav class="navbar navbar-expand-lg" aria-label="breadcrumb">
       <div class="container-fluid">
@@ -36,11 +39,27 @@
       </div>
     </nav>
   </header>
-  <main>
-    <div class="container text-center">
-      <h1>박서연</h1>
+  <main class="d-flex flex-column justify-content-center align-items-center flex-grow-1">
+    <div class="container text-center mb-3">
+      <h1 class="mb-3">박서연</h1>
       <p><i class="fa-solid fa-envelope"></i> tjduxxx@gmail.com</p>
       <p><i class="fa-brands fa-github"></i> https://github.com/tjdux</p>
+    </div>
+    <div class="container d-flex justify-content-center">
+      <section class="cloneable">
+        <div data-hover="" data-pixelated-image-reveal="" class="pixelated-image-card">
+          <div class="before__100"></div>
+          <div class="pixelated-image-card__default">
+            <img src="https://image.tmdb.org/t/p/w440_and_h660_face/2Nti3gYAX513wvhp8IiLL6ZDyOm.jpg" alt="" class="pixelated-image-card__img">
+          </div>
+          <div data-pixelated-image-reveal-active="" class="pixelated-image-card__active">
+            <img src="" width="400" alt="" class="pixelated-image-card__img">
+          </div>
+          <div data-pixelated-image-reveal-grid="" class="pixelated-image-card__pixels">
+            <div class="pixelated-image-card__pixel"></div>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
 </body>

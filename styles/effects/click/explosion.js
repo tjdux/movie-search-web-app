@@ -1,5 +1,5 @@
 window.addEventListener("click", (e) => {
-  explode(e.pageX, e.pageY);  // ✅ pageX, pageY로 바꿈
+  explode(e.pageX, e.pageY); 
 });
 
 
@@ -13,7 +13,6 @@ function explode(x, y) {
     div.style.width = `${size}px`;
     div.style.height = `${size}px`;
 
-    // 정확히 커서 중앙에 오도록 left, top을 직접 설정
     div.style.left = `${x - size / 2}px`;
     div.style.top = `${y - size / 2}px`;
 

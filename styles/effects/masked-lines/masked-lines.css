@@ -1,0 +1,7 @@
+.split{
+  will-change: transform;
+}
+
+.split * {
+  will-change: transform;
+} 

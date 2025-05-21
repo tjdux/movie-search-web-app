@@ -3396,4 +3396,6 @@ const movieList = {
   total_results: 1008061,
 };
 
-export {movieList}
+const movies = movieList.results;
+
+export {movies};

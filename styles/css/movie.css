@@ -1,25 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-*{
-  font-family: "Noto Sans", sans-serif;
-}
-
-.split{
-  will-change: transform;
-}
-
-.split * {
-  will-change: transform;
-} 
-
 .fa-solid{
   color: #ffccde;
 }
 
 .navbar{
-  background-color: #ffccde;
+  background-color: #ffd7e5;
 }
 
 body {
   min-height: 100vh;
+}
+
+.poster{
+  width: 300px;
 }
