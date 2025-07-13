@@ -1,36 +1,35 @@
 import { movies } from "../data/movieList.js";
-import { scrollTriger } from "../styles/effects/scroll-trigger/scroller-trigger.js";
 
 const movieTitleInput = document.querySelector("#movie-title");
 const searchMovieForm = document.querySelector(".search-movie");
 const searchedMoviesList = document.querySelector(".searched-movie-list");
 
-searchMovieForm.addEventListener("submit", function(e){
+searchMovieForm.addEventListener("submit", function (e) {
   e.preventDefault();
   const movieTitle = movieTitleInput.value.trim().toLowerCase();
   clearSearchUI();
   renderSearchedMoviesList(movieTitle);
-  scrollTriger();
-})
+});
 
-searchedMoviesList.addEventListener("click", function(e) {
-  if (e.target.closest(".card")){
-    const idx = e.target.closest(".card").classList[2]
+searchedMoviesList.addEventListener("click", function (e) {
+  if (e.target.closest(".card")) {
+    const idx = e.target.closest(".card").classList[2];
     if (isNaN(idx)) return;
-    window.location.href=`movie.html?idx=${idx}`;
+    window.location.href = `movie.html?idx=${idx}`;
   }
-})
+});
 
-function clearSearchUI(){
-  searchedMoviesList.classList = 'row row-cols-sm-2 row-cols-md-4 row-cols-lg-6 g-4 searched-movie-list';
+function clearSearchUI() {
+  searchedMoviesList.classList =
+    "row row-cols-sm-2 row-cols-md-4 row-cols-lg-6 g-4 searched-movie-list";
   searchedMoviesList.innerHTML = ``;
-  movieTitleInput.value = '';
+  movieTitleInput.value = "";
 }
 
-function renderSearchedMoviesList(movieTitle){
-  let searchedMoviesinnerHTML = ''
+function renderSearchedMoviesList(movieTitle) {
+  let searchedMoviesinnerHTML = "";
   for (const idx in movies) {
-    if (movies[idx].title.toLowerCase().includes(movieTitle)){
+    if (movies[idx].title.toLowerCase().includes(movieTitle)) {
       searchedMoviesinnerHTML += `
         <div class="position-relative col" >
           <div class="card h-100 ${idx}">
@@ -42,19 +41,19 @@ function renderSearchedMoviesList(movieTitle){
             </div>
           </div>
         </div>
-      ` 
+      `;
     }
   }
 
-  if (!searchedMoviesinnerHTML){
-    searchedMoviesList.classList = 'row row-cols-1 searched-movie-list';
+  if (!searchedMoviesinnerHTML) {
+    searchedMoviesList.classList = "row row-cols-1 searched-movie-list";
     searchedMoviesinnerHTML = `
       <div class="position-relative col">
         <div class="card">
           <p class = "text-center warning">검색 결과가 없습니다 😖<p>
         </div>
       </div>
-    `
+    `;
   }
 
   searchedMoviesList.innerHTML = searchedMoviesinnerHTML;
